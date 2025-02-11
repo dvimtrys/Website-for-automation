@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="todo-form">
+        <input type="text" id="todo-input" placeholder="Enter a new task..." />
+        <select id="priority-select">
+          <option disabled selected value>Select priority</option>
+          <option value="urgent">Urgent</option>
+          <option value="medium">Medium</option>
+          <option value="not-urgent">Not Urgent</option>
+        </select>
+        <select id="status-select">
+          <option disabled selected value>Select status</option>
+          <option value="active">Active</option>
+          <option value="in-progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        <option>Select due date</option>
+        <input type="date" id="due-date" />
+        <button id="add-todo-btn">Add Task</button>
+      </div>
+
+      <div class="filters">
+        <label for="filter-priority">Priority:</label>
+        <select id="filter-priority">
+          <option value="all">All</option>
+          <option value="urgent">Urgent</option>
+          <option value="medium">Medium</option>
+          <option value="not-urgent">Not Urgent</option>
+        </select>
+
+        <label for="filter-status">Status:</label>
+        <select id="filter-status">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="in-progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+
+        <label for="filter-date">Date:</label>
+        <select id="filter-date">
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="this-week">This Week</option>
+          <option value="next-week">Next Week</option>
+          <option value="this-month">This Month</option>
+          <option value="this-year">This Year</option>
+        </select>
+      </div>
+
+      <ul id="todo-list"></ul>
+
+      <div class="pagination">
+        <button id="prev-btn" disabled>Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn" disabled>Next</button>
+      </div>
+
+      <div class="subscription-form">
+        <input type="email" id="email-input" placeholder="Enter your email" />
+        <label>
+          <input type="checkbox" id="subscribe-checkbox" />
+          * Subscribe to newsletter
+        </label>
+        <button id="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

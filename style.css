@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#todo-input,
+#priority-select,
+#status-select,
+#due-date {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#add-todo-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add-todo-btn:hover {
+  background-color: #4cae4c;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters label {
+  margin-right: 10px;
+  color: #555;
+  background-color: #e0e0e0;
+  padding: 5px 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: grab;
+}
+
+.todo-item .task-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  color: #00ff26;
+}
+
+.todo-item[data-priority="urgent"] .task-text {
+  color: #d9534f;
+}
+
+.todo-item[data-priority="medium"] .task-text {
+  color: #f0ad4e;
+}
+
+.todo-item[data-priority="not-urgent"] .task-text {
+  color: #5bc0de;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #888;
+}
+
+.todo-actions button:hover {
+  color: #333;
+}
+
+.todo-item.dragging {
+  opacity: 0.5;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ccf6bd;
+  margin-top: 20px; /* Adds space between the pagination and the subscription form */
+}
+
+#email-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#subscribe-checkbox {
+  margin-right: 10px;
+}
+
+#subscribe-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #3c4d3c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#subscribe-btn:hover {
+  background-color: #4cae4c;
+}
